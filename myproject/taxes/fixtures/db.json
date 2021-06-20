@@ -1,0 +1,92 @@
+[
+  {
+    "model": "taxes.Users",
+    "fields": {
+        "userid": 1,
+        "first_name": "George",
+        "last_name": "Hanks",
+        "email": "a@a.com"
+    }
+  },
+  { 
+    "model": "taxes.Users",
+    "fields":{
+        "userid": 2,
+        "first_name": "John",
+        "last_name": "Harrison",
+        "email": "b@b.com"
+    }
+  },
+  {
+    "model": "taxes.Users",
+    "fields":{
+        "userid": 3,
+        "first_name": "Peter",
+        "last_name": "Harris",
+        "email": "c@c.com"
+    }
+  },
+ {
+    "model": "taxes.Users",
+    "fields":{
+        "userid": 4,
+        "first_name": "Jason",
+        "last_name": "Johnson",
+        "email": "d@d.com"
+    }
+ },
+  {
+    "model": "taxes.Taxes",
+    "fields":{
+        "id": 1,
+        "typeVeh": "car",
+        "amount": 200,
+        "userId": 1
+      }
+  },
+  {
+    "model": "taxes.Taxes",
+    "fields":{
+        "id": 2,
+        "typeVeh": "motorcycle",
+        "amount": 100,
+        "userId": 1
+      }
+  },
+  {
+    "model": "taxes.Taxes",
+    "fields":{
+        "id": 3,
+        "typeVeh": "truck",
+        "amount": 350,
+        "userId": 3
+      }
+  },
+  {
+    "model": "taxes.Taxes",
+    "fields":{
+        "id": 4,
+        "typeVeh": "car",
+        "amount": 200,
+        "userId": 2
+      }
+    },
+    {
+      "model": "taxes.Taxes",
+      "fields":{
+        "id": 5,
+        "typeVeh": "motorcycle",
+        "amount": 100,
+        "userId": 4
+      }
+    },
+    {
+      "model": "taxes.Taxes",
+      "fields":{
+        "id": 4,
+        "typeVeh": "car",
+        "amount": 200,
+        "userId": 3
+      }
+  }
+]

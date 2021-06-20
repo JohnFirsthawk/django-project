@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+<ul id="list-group"></ul>
+    {% for users in allusers %}
+    <li class="list-group-item">
+        <a href = "/taxes/{{users.userId}}">
+             Last name : {{users.last_name}} - First name : {{users.first_name}} - E-mail : {{users.email}}
+        </a>
+     </li>
+{% endfor %}
+
+{% endblock %}
