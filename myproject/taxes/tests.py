@@ -14,6 +14,6 @@ class PostModelTests(TestCase):
 
     def test_taxes_add(self):
         user = User.objects.get(pk=1)
-        taxes = Taxes(id=2, typeVeh= 'car', amount = 200)
+        taxes = Taxes(userId=user, typeVeh= 'car', amount = 200)
         taxes.save()
         self.assertEquals(Taxes.objects.get(pk=1).amount, 200)
