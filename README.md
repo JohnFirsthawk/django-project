@@ -1,9 +1,10 @@
 # Clone and run project
 ```bash
-git clone https://github.com/tsadimas/django3-sampe-project.git
+git clone https://github.com/JohnFirsthawk/django-project.git
 python -m venv myvenv
+sudo bash
 source myvenv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 cd myproject
 cp myproject/.env.example myproject/.env
 ```
