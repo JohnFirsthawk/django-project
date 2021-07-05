@@ -2,7 +2,6 @@
 ```bash
 git clone https://github.com/JohnFirsthawk/django-project.git
 python -m venv myvenv
-sudo bash
 source myvenv/bin/activate
 pip3 install -r requirements.txt
 cd myproject
