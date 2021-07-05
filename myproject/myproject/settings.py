@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+import dj_database_url
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, True)
@@ -93,6 +94,7 @@ DATABASES = {
     'extra': env.db('SQLITE_URL', default='sqlite:///.db.sqlite3')
 }
 
+DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
