@@ -3,6 +3,13 @@
 
 {% block body_block %}
 
-    <h3> Καλωσήρθατε στο σύστημα τελών κυκλοφορίας</h3>
-
+    <h1><b>Registration Fees</b></h1>
+    <p> Welcome to Vehicle Registration Fees, a website developed on Django!</p>
+    <h2>Dynamic Content</h2>
+    <p>The website has the following record counts:</p>
+    <ul>
+        <li><strong>Users:</strong> {{ num_users }}</li>
+        <li><strong>Taxes:</strong> {{ num_taxes }}</li>
+        <li><strong>Extended Taxes:</strong> {{ num_taxes_extended }}</li> 
+    </ul>
 {% endblock %}

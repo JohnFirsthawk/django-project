@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+<ul id="list-group">
+    {% for users in allusers %}
+    <li class="list-group-item">
+        <a href = "/taxes/{users.userId}">
+            <h3>Enter the id of the User to add a car</h3>
+            
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %} 

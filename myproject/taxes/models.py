@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.db import models
 from django.db.models.deletion import CASCADE
 
@@ -16,7 +17,7 @@ class Users(models.Model):
 
 class Taxes(models.Model):
     id = models.AutoField(primary_key=True)
-    userId = models.ForeignKey(Users, on_delete=CASCADE)
+    userId = models.ForeignKey(Users,on_delete=CASCADE)
     typeVeh = models.CharField(max_length=100)
     amount = models.FloatField()
     #next_date = models.DateTimeField(auto_now=True)
@@ -26,3 +27,18 @@ class Taxes(models.Model):
 
     def __str__(self):
         return self.id, self.typeVeh, self.amount, self.userId
+
+class Client(models.Model):
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    tax = models.ForeignKey(Taxes, on_delete=models.CASCADE)
+    date_inserted = models.DateField()
+
+class UserInline(admin.TabularInline):
+    model = Client
+    extra = 1
+
+class UserAdmin(admin.ModelAdmin):
+    inlines = (UserInline,)
+
+class TaxesAdmin(admin.ModelAdmin):
+    inlines = (UserInline,) 

@@ -20,7 +20,6 @@ pipeline {
                     pip install -r requirements.txt
                     cd myproject
                     cp myproject/.env.example myproject/.env
-                    sed -i 's#^DATABASE_URL.*#DATABASE_URL=postgresql://dbuser:pass123@pg-cluster-ip/test_db#g' myproject/.env
                     python3 manage.py test'''
             }
         }
